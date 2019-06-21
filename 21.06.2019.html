@@ -1,3 +1,205 @@
-<html>
-    <h1>hiiii</h1>
+<!DOCTYPE html>
+<!--
+ASSIGNMENT RULES
+- The solution must be pushed to the repository and be available for the tutors by the end of the day
+- You can ask for tutor's help
+- You can google / use StackOverflow BUT we suggest you to use just the material provided
+- To test the page, just open it with your default browser.
+
+ASSIGNMENT TOPIC
+You are building a Barbers' Shop website. 
+The website is quite simple, it should include the basic information about the Shop (Name, address etc)
+and include a form to get reservation.
+
+Note: the form should just be implemented in HTML + CSS, no extra code needed.
+-->
+<html lang="en">
+    <head>
+    <!-- EXERCISE 1:
+    Specify the title, the charset (UTF-8) and the viewport of the page.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rushi's Barber Shop</title>
+    <style>
+
+    h1   
+    {
+        color:darkolivegreen;
+        align-content: center;
+        size: large;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-display: bold;
+        text-align: center;
+        }
+
+      bg_img
+      {
+         
+
+      }  
+
+      p{
+          font-family: 'Courier New', Courier, monospace;
+          font-size: large;
+      }
+
+      body{
+          box-sizing: border-box;
+          box-lines:initial;
+          font-family: 'Courier New', Courier, monospace;
+          font-size: large;
+          width: 100%;
+          height: 850px;
+          padding-left: 10%;
+          padding-right: 10%;
+          background-image: url("BackImg2.jpg");
+          background-size: 100%;
+
+      }
+
+      button{
+        size: large;
+
+      }
+
+      footer{
+
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 2.5rem; 
+      }
+
+      #page-container {
+            position: relative;
+            min-height: 100vh;
+            }
+    /* EXERCISE 2:  
+       Style h1 color, alignment, size as you like it;
+       Style h2 color, alignment, size as you like it;
+       Style page background color as you like it
+       [EXTRA]
+       Set a red-ish color when the input of the forms are invalid
+       Set a ok-ish color when the input of the forms are valid
+    */
+
+    </style>
+
+    </head>
+    <body class="body" >
+        <div id="#page-container">
+        <!-- EXERCISE 3:
+            Write the main title of the barber shop and a smaller claim.
+        -->
+        <table style="width: 100%" >
+            <tr>
+                <td>
+                <h1>Rushi's !!!</h1>     
+               <p class="p" > It is the largest trade shop center in warsaw and an experienced event organizer. 
+                At this shop, You will gain valuable knowledge and learn about new products on the market.</p>
+                </td>
+            </tr>
+
+
+            <!-- EXERCISE 4: 
+            Write a section in which you explain a current promotion
+        -->
+        <tr>
+            <td>
+
+                <p>Hurry Up!!! for exciting promotions---</p>
+                <!-- EXERCISE 6: 
+            Write a "Leave Email" form. 
+            The form must have a field for the Email and a button for the submission of the field itself.
+            The field must accept ONLY valid emails (empty email is not a valid email).
+
+            [OPTIONAL] On submit click, console log the value of the email
+        -->
+             <p>Just write Email to know more offers...  </p>
+               <form onsubmit="getData()" >
+                   Email : <input type="text" value="email" size=30 
+                   pattern="[a-zA-Z0-9!#$%&amp;'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*" required >
+                   <br>
+                   <input type="button" value="submit"   >
+                  
+               </form>
+                <script type="text/javascript">
+                function getData()
+                {
+                 console.log(document.getElementById('email'));
+                }
+                </script>
+            </td>
+        </tr>
+
+        <!-- EXERCISE 5: 
+            Write a section with the address of the shop.
+            [OPTIONAL] Link this address to Google Maps page.
+        -->
+        <tr>
+            <td>
+               <p> visit us : 
+
+                Warsaw - Poland</p>
+            </td>
+        </tr>
+
+
+         
+        <tr>
+            <td>
+                <p></p>
+            </td>
+        </tr>
+        </table>
+        
+
+        
+    
+        
+
+       
+        <!-- EXERCISE 7: 
+            Create an "book haircut" form.
+            The form must have:
+            - phone number
+            - date
+            - name
+
+            Phone number and date are mandatory, the name is optional.
+            Create a form with a submit button, ready to be used in a real context.
+            Style it as you like it.
+            [OPTIONAL] On submit click, console log an object containing Phone Number, Date and Name.
+        -->
+
+        <!-- EXERCISE 8: 
+            
+            Place here a footer including:
+            - Name of the Barber Shop
+            - Address
+            - Phone Number
+            - Email (should be a clickable link)
+        -->
+    </div>
+        <footer>
+
+            <p>Rushi's Barber </p><br><p>Reach here - Warsaw Poland</p>
+            
+            <p>Contact - +48 759485411</p>
+            <p>email -<a href="#">rushi.c@gmail.com</a> </p>
+        </footer>
+
+        <script>
+            window.onload = function() {
+                console.log("Page loaded!");
+                console.log(window.innerHeight);
+                console.log(window.innerWidth);
+                /* EXERCISE 9:
+                    Write on console the size (height and width) of the current browser window
+                    Write on console the size (height and width) of the current page window
+                */
+            };
+        </script>
+    </body>
 </html>
